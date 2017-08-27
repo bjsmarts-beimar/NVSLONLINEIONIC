@@ -1,0 +1,28 @@
+<!--
+  Generated template for the TeamDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title align-title="left">Team Schedule</ion-title>
+    <ion-buttons end>
+      <button (click)="goHome()"><ion-icon name="home"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>    
+  <ion-toolbar color="secondary">
+    <ion-title align-title="left">{{ teamName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+      <div *ngFor="let game of schedule">
+          <ion-card>
+          <ion-card-content>
+            <h2><span class='link' (click)="itemSelected(game.HomeTeam)">{{game.HomeTeam.TeamName}}</span> 0 - 0 <span class='link' (click)="itemSelected(game.AwayTeam)">{{game.AwayTeam.TeamName}}</span></h2>
+            <p>{{game.Status}} {{formatDate(game.DateTime)}} - {{formatTime(game.DateTime)}}</p>
+            <p>{{game.Venue.VenueName}}</p>         
+          </ion-card-content>
+          </ion-card>
+        </div> 
+</ion-content>

@@ -1,5 +1,6 @@
 {
   "name": "nvsl-online-app",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "97a97950",
+  "type": "ionic-angular",
+  "integrations": {}
 }
